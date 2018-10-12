@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册-聚美账户</title>
+		<link rel="stylesheet" href="css/register.css" />
+	</head>
+	<body >
+		<div id="header">
+			<div class="w">
+				<h1 class="l">
+					<a href="http://bj.jumei.com/">
+						<img src="logimg/logo_new_v1.jpg"/>
+					</a>
+				</h1>
+				<div class="r right">
+					<a href="#" class="l"></a>
+					<a href="#" class="l"></a>
+					<a href="#" class="l"></a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="banner">
+			<div class="w">
+				<div class="logimg">
+					<a href=""></a>
+				</div>
+				<div class="loginpage">
+					<div class="logtop">
+						<h1 class="l">用户注册</h1>
+						<div class="r right">
+							已有账号<a href="login.html">在此登录 </a>
+						</div>
+					</div>
+					
+					
+					<form class="forms">
+						<div class="txts1">
+							<input type="text" name="" id="phonetxt" placeholder="手机号" autofocus />
+							<p class="focus1">请输入11位手机号码</p>
+						</div>
+						
+						<div class="pass">
+							<div class="l left">
+								<input type="text" name="" id="matxt" placeholder="短信校验码" />
+								<p class="focus2">请输入6位短信校验码</p>
+							</div>
+							<a href="#" class="l right">获取短信校验码</a>
+						</div>
+						<div class="txts2">
+							<input type="text" name="" id="passt" placeholder="密码"  />
+							<p class="focus3">6-16个字符,建议使用字母加数字或符号组合</p>
+						</div>
+						<div class="txts3">
+							<input type="text" name="" id="repasst" placeholder="重复密码"  />
+							<p class="focus4">请再次输入密码</p>
+						</div>
+					
+						<input  class="sub" type="submit" name="" id="" value="同意协议并注册" />
+						<p class="autos">
+							<a href="#" >《聚美优品用户协议》</a>
+						</p>
+					</form>
+					
+					
+					
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<div id="footer">
+			<div class="w">
+				<p class="first">
+					Copyright © 2010-2015 北京创锐文化传媒有限公司 Jumei.com 保留一切权利。客服热线：400-123-8888 <br/>
+					京公网安备 11010102001226 号 | 
+					<a href="">京ICP证111033号</a> | 食品流通许可证 SP1101051110165515（1-1） | 
+					<a href="">营业执照 </a>| 
+					<a href="">公示制度</a>
+				</p>
+				<p class="second">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</p>
+			</div>
+			
+		</div>
+		
+
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#phonetxt")[0].onclick=function(){		
+		$(".focus1").css({display:"block"});
+		
+	};
+	$("#phonetxt")[0].onblur=function(){
+		
+		$(".focus1").css({display:"none"});
+		
+	};
+	
+	$("#matxt")[0].onclick=function(){
+		
+		$(".focus2").css({display:"block"});
+		
+	};
+	$("#matxt")[0].onblur=function(){
+		
+		$(".focus2").css({display:"none"});
+		
+	};
+	$("#passt")[0].onclick=function(){
+		
+		$(".focus3").css({display:"block"});
+		
+	};
+	$("#passt")[0].onblur=function(){
+		
+		$(".focus3").css({display:"none"});
+		
+	};
+	$("#repasst")[0].onclick=function(){
+		
+		$(".focus4").css({display:"block"});
+		
+	};
+	$("#repasst")[0].onblur=function(){
+		
+		$(".focus4").css({display:"none"});
+		
+	};
+	
+	$("input").click(function(){
+		$(this).css({"box-shadow": "2px 2px 8px #daeef5"});
+		
+	});
+	$("input").blur(function(){
+		$(this).css({"box-shadow": "0 0 0 #daeef5"});
+		
+	});
+		
+		
+});
+	
+	
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

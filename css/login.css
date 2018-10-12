@@ -1,0 +1,91 @@
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input{ padding:0; margin:0}
+ul,ol{ list-style:none;}
+input{ outline:none;}
+img{ display:block; border:0;}
+body{ font-size:12px; color:#333; font-family:"微软雅黑"; }
+a{ font-size:12px;text-decoration:none; color:#6c6c6c;}
+a:hover{ color:#eb155b;}
+/*========================public================*/
+.w{ width:960px; margin:0 auto}
+.l{ float:left;}
+.r{ float:right}
+/*=======================header=================*/
+#header{height: 85px;overflow: hidden;}
+#header .w{height: 100%;}
+#header .w .right{height: 66px; width: 466px;padding-top: 35px; }
+#header .w .right a{display: block; width: 110px;height: 31px;overflow: hidden;margin-right: 24px;}
+#header .w .right a:nth-child(1){background: url(../logimg/header_corn_new_v2.png) no-repeat 0 0 ;}
+#header .w .right a:nth-child(2){ width: 170px; background: url(../logimg/gild.png) no-repeat ;}
+#header .w .right a:nth-child(3){background: url(../logimg/header_corn_new_v2.png) no-repeat 0 -64px ;}
+/*=======================banner=================*/
+#banner{overflow: hidden;}
+#banner .w{ margin-bottom:50px;margin-top:50px;position:relative;height: 418px; }
+#banner .w .logimg{ width:100%;position:absolute;height: 360px;background: url(../logimg/loginPic.jpg) no-repeat;}
+#banner .w .loginpage{ width: 300px; position: absolute;min-height: 400px; z-index:3;padding: 0 23px; right: 0; top:-10px;box-shadow: 0 0 8px rgba(0,0,0,.2);background: rgba(255,255,255,.85);}
+#banner .w .loginpage .logtop{width:300px ; height:60px ;margin-bottom: 15px;line-height: 60px}
+#banner .w .loginpage .logtop h1{ font-size: 20px; color: #e31256; }
+#banner .w .loginpage .logtop .right a{color: #ed145b;}
+#banner .w .loginpage .logtop .right a:hover{text-decoration: underline;}    
+
+#banner .w .loginpage .radiocheck{ height: 30px;} 
+#banner .w .loginpage .radiocheck span{ height: 14px; padding-right:30px ;}
+#banner .w .loginpage .radiocheck span input{vertical-align: middle;}
+#banner .w .loginpage .forms{overflow: hidden;}
+#banner .w .loginpage .forms .txts{position:relative;height: 44px; margin-bottom: 26px;}
+#banner .w .loginpage .forms .txts input{ margin: 2px; background:url(../logimg/sign.png) no-repeat 5px 0 ;width: 250px;border: 1px solid #CFCFCF;vertical-align: middle;padding: 10px 8px;padding-left: 38px;line-height: 1.5; font-size:14px;outline: 0;height: auto}
+#banner .w .loginpage .forms .txts p{display:none;position: absolute; margin-top: 4px;color: #999;top: 100%;left: 0}
+
+#banner .w .loginpage .forms .pass{position:relative;height: 44px;font-size: 12px;margin: 30px 0;clear: both;color: #333;}
+#banner .w .loginpage .forms .pass .left input{background:url(../logimg/sign.png) no-repeat 5px -50px ; width: 88px;display: inline-block;border: 1px solid #CFCFCF;background-color: #fff;vertical-align: middle; padding: 10px 8px;line-height: 1.5;font-size: 14px;outline: 0;height: auto;padding-left: 38px;}
+#banner .w .loginpage .forms .pass .left p{display:none;position: absolute; margin-top: 4px;color: #999;top: 100%;left: 0}
+#banner .w .loginpage .forms .pass>a{display: inline-block;width: 130px;background: linear-gradient(to bottom,#fcfcfc,#f2f2f2);border: 1px solid #d9d9d9;padding: 0 8px;line-height: 41px;height: 41px;font-weight: 700;color: #666;margin-left: 10px;text-align: center;}
+#banner .w .loginpage .forms .autos{margin: 10px 0; line-height: 1.5;}
+#banner .w .loginpage .forms .autos input{vertical-align: middle;}
+#banner .w .loginpage .forms .sub{display: block; width: 100%; background: #F8296D;text-align: center;line-height: 40px;font-weight: 700;font-size: 14px;padding: 0 30px;height: 40px;color: #fff;border: 0;}
+
+#banner .w .loginpage .bottom{ width: 300px;  line-height: 1.5;}
+#banner .w .loginpage .bottom p:nth-child(1){padding-bottom: 10px;padding-top: 5px}
+#banner .w .loginpage .bottom p:nth-child(2){width: 300px; height: 43px;margin-bottom: 15px; overflow: hidden;}
+#banner .w .loginpage .bottom p:nth-child(2) a{display: inline-block; width: 43px;height: 43px;margin-right: 10px;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(1){background: url(../logimg/icon_light.jpg) no-repeat 0 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(2){background: url(../logimg/icon_light.jpg) no-repeat -57px 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(3){background: url(../logimg/icon_light.jpg) no-repeat -114px 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(4){background: url(../logimg/icon_light.jpg) no-repeat -169px 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(5){background: url(../logimg/icon_light.jpg) no-repeat -224px 0;}
+
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(1):hover{background: url(../logimg/icon.jpg) no-repeat 0 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(2):hover{background: url(../logimg/icon.jpg) no-repeat -57px 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(3):hover{background: url(../logimg/icon.jpg) no-repeat -114px 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(4):hover{background: url(../logimg/icon.jpg) no-repeat -169px 0;}
+#banner .w .loginpage .bottom p:nth-child(2) a:nth-child(5):hover{background: url(../logimg/icon.jpg) no-repeat -224px 0;}
+
+#banner .w .loginpage .bottom p:nth-child(2) span{ cursor:pointer;display: inline-block; line-height: 30px;position: relative;left: -7px; margin-top: 5px}
+#banner .w .loginpage .bottom p:nth-child(2) span i{background:url(../logimg/icon.jpg) no-repeat -274px -23px; width: 18px;height: 17px; display: inline-block;position: absolute;right: -21px; top: 7px;}
+
+#banner .w .loginpage .bottom p:nth-child(3){ display:none;width: 300px; height: 43px;margin-bottom: 15px; overflow: hidden;}
+#banner .w .loginpage .bottom p:nth-child(3) a{display: inline-block; width: 43px;height: 43px;margin-right: 10px;}
+#banner .w .loginpage .bottom p:nth-child(3) a:nth-child(1){background: url(../logimg/icon_light.jpg) no-repeat 0 -54px;}
+#banner .w .loginpage .bottom p:nth-child(3) a:nth-child(2){background: url(../logimg/icon_light.jpg) no-repeat -57px -54px;}
+#banner .w .loginpage .bottom p:nth-child(3) a:nth-child(3){background: url(../logimg/icon_light.jpg) no-repeat -169px -54px;}
+#banner .w .loginpage .bottom p:nth-child(3) a:nth-child(1):hover{background: url(../logimg/icon.jpg) no-repeat 0 -54px;}
+#banner .w .loginpage .bottom p:nth-child(3) a:nth-child(2):hover{background: url(../logimg/icon.jpg) no-repeat -57px -54px;}
+#banner .w .loginpage .bottom p:nth-child(3) a:nth-child(3):hover{background: url(../logimg/icon.jpg) no-repeat -169px -54px;}
+
+
+
+/*=======================footer=================*/
+#footer{overflow: hidden; padding-top: 5px; padding-bottom: 80px;}
+#footer .w{overflow: hidden; margin: 0 auto;}
+#footer .w .first{text-align: center;padding: 14px 0 18px;line-height: 23px;}
+#footer .w .second{ height:56px; text-align: center;}
+#footer .w .second a{border-bottom: 1px solid #d7d7d7;width: 126px;height: 50px;overflow: hidden;display: inline-block;margin-right: 8px;}
+#footer .w .second a:nth-child(1){background: url(../logimg/footer_btm_icon.png) no-repeat  0 0 ;}
+#footer .w .second a:nth-child(2){background: url(../logimg/footer_btm_icon.png) no-repeat -126px 0 ;}
+#footer .w .second a:nth-child(3){background: url(../logimg/footer_btm_icon.png) no-repeat -253px 0 ;}
+#footer .w .second a:nth-child(4){background: url(../logimg/footer_btm_icon.png) no-repeat -379px 0 ;}
+#footer .w .second a:nth-child(5){background: url(../logimg/footer_btm_icon.png) no-repeat -505px 0 ;}
+
+
+
+
+

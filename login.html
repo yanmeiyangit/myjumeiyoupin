@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-聚美</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body >
+		<div id="header">
+			<div class="w">
+				<h1 class="l">
+					<a href="http://bj.jumei.com/">
+						<img src="logimg/logo_new_v1.jpg"/>
+					</a>
+				</h1>
+				<div class="r right">
+					<a href="#" class="l"></a>
+					<a href="#" class="l"></a>
+					<a href="#" class="l"></a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="banner">
+			<div class="w">
+				<div class="logimg">
+					
+				</div>
+				<div class="loginpage">
+					<div class="logtop">
+						<h1 class="l">登录聚美</h1>
+						<div class="r right">
+							还没有聚美帐号？
+							<a href="">30秒注册 </a>
+						</div>
+					</div>
+					<div class="radiocheck">
+						<span>
+							<input type="radio"  name="log"  checked />
+							手机动态密码登录
+						</span>
+						<span >
+							<input type="radio"  name="log"  />
+							普通登录
+						</span>
+						
+					</div>
+					
+					<form class="forms">
+						<div class="txts">
+							<input type="text" name="" id="phonetxt" placeholder="已注册的手机号码"  />
+							<p class="focus1">请输入11位手机号码</p>
+						</div>
+						
+						<div class="pass">
+							<div class="l left">
+								<input type="text" name="" id="matxt" placeholder="动态密码" />
+								<p class="focus2">请点击获取手机动态密码</p>
+							</div>
+							<a href="#" class="r right">获取手机动态密码</a>
+						</div>
+						
+						<p class="autos">
+							<input type="checkbox" name="" id="" checked />
+							自动登录
+						</p>
+						<input  class="sub" type="submit" name="" id="" value="登录" />
+						
+					</form>
+					
+					<div class="bottom">
+						<p>你也可以使用以下帐号登录</p>
+						<p>
+							<a href="#" class="l"></a>
+							<a href="#" class="l"></a>
+							<a href="#" class="l"></a>
+							<a href="#" class="l"></a>
+							<a href="#" class="l"></a>
+							<span class="l more">更多<i class="changbg"></i></span>
+						</p>
+						<p class="showmore">
+							<a href="#" class="l"></a>
+							<a href="#" class="l"></a>
+							<a href="#" class="l"></a>
+						</p>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<div id="footer">
+			<div class="w">
+				<p class="first">
+					Copyright © 2010-2015 北京创锐文化传媒有限公司 Jumei.com 保留一切权利。客服热线：400-123-8888 <br/>
+					京公网安备 11010102001226 号 | 
+					<a href="">京ICP证111033号</a> | 食品流通许可证 SP1101051110165515（1-1） | 
+					<a href="">营业执照 </a>| 
+					<a href="">公示制度</a>
+				</p>
+				<p class="second">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</p>
+			</div>
+			
+		</div>
+		
+
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#phonetxt")[0].onclick=function(){
+		$("#phonetxt").css({"box-shadow": "2px 2px 8px #daeef5"});
+		$(".focus1").css({display:"block"});
+		
+	};
+	$("#phonetxt")[0].onblur=function(){
+		$("#phonetxt").css({"box-shadow": "0 0 0 #daeef5"});
+		$(".focus1").css({display:"none"});
+		
+	};
+	
+	$("#matxt")[0].onclick=function(){
+		$("#matxt").css({"box-shadow": "2px 2px 3px #daeef5"});
+		$(".focus2").css({display:"block"});
+		
+	};
+	$("#matxt")[0].onblur=function(){
+		$("#matxt").css({"box-shadow": "0 0 0 #daeef5"});
+		$(".focus2").css({display:"none"});
+		
+	};
+	
+	
+	$(".more").click(function(){		
+		$(".showmore").toggle(400);	
+		$(".changbg").css({background:"url(logimg/icon.jpg) no-repeat -274px 0"});	
+	});
+	
+		
+		
+})
+	
+	
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
