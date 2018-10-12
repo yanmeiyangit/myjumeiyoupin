@@ -11,6 +11,10 @@ gulp.task("copy-html",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
 	gulp.src("*.html").pipe(gulp.dest("D:\\PHPTutorial\\WWW\\myjumeiyoupin"));
 });
+gulp.task("copy-php",function(){
+	//gulp.src("index.html").pipe(gulp.dest("dist"));
+	gulp.src("*.php").pipe(gulp.dest("D:\\PHPTutorial\\WWW\\myjumeiyoupin"));
+});
 gulp.task("css",function(){
 	gulp.src('css/**/*')
 	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\css'));
@@ -19,6 +23,10 @@ gulp.task("css",function(){
 gulp.task("img",function(){
 	gulp.src('img/**/*')
 	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\img'));
+});
+gulp.task("js",function(){
+	gulp.src('js/**/*')
+	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\js'));
 });
 gulp.task("logimg",function(){
 	gulp.src('logimg/**/*')
@@ -39,6 +47,8 @@ gulp.task("watchall",function(){
 	gulp.watch("*.html",["copy-html"]);
 	gulp.watch("css/**/*",["css"]);
 	gulp.watch("img/**/*",["img"]);
+	gulp.watch("js/**/*",["js"]);
 	gulp.watch("logimg/**/*",["logimg"]);
+	gulp.watch("*.php",["copy-php"]);
 	
 });

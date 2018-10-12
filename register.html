@@ -35,21 +35,21 @@
 					</div>
 					
 					
-					<form class="forms">
+					<form class="forms" action="reg.php" method="post">
 						<div class="txts1">
-							<input type="text" name="" id="phonetxt" placeholder="手机号" autofocus />
-							<p class="focus1">请输入11位手机号码</p>
+							<input type="text" name="userphone" id="phonetxt" placeholder="手机号" autofocus />
+							<p class="focus1" id="shouji">请输入11位手机号码</p>
 						</div>
 						
 						<div class="pass">
 							<div class="l left">
-								<input type="text" name="" id="matxt" placeholder="短信校验码" />
+								<input type="text" name="usermessage" id="matxt" placeholder="短信校验码" />
 								<p class="focus2">请输入6位短信校验码</p>
 							</div>
 							<a href="#" class="l right">获取短信校验码</a>
 						</div>
 						<div class="txts2">
-							<input type="text" name="" id="passt" placeholder="密码"  />
+							<input type="text" name="userpass" id="passt" placeholder="密码"  />
 							<p class="focus3">6-16个字符,建议使用字母加数字或符号组合</p>
 						</div>
 						<div class="txts3">
@@ -57,7 +57,7 @@
 							<p class="focus4">请再次输入密码</p>
 						</div>
 					
-						<input  class="sub" type="submit" name="" id="" value="同意协议并注册" />
+						<input  class="sub" type="submit" name="" id="zhuce" value="同意协议并注册" />
 						<p class="autos">
 							<a href="#" >《聚美优品用户协议》</a>
 						</p>
@@ -95,6 +95,7 @@
 		
 	</body>
 </html>
+<script type="text/javascript" src="js/RegExpTools.js" ></script>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript">
 $(function(){
@@ -105,7 +106,7 @@ $(function(){
 	};
 	$("#phonetxt")[0].onblur=function(){
 		
-		$(".focus1").css({display:"none"});
+		//$(".focus1").css({display:"none"});
 		
 	};
 	
@@ -126,7 +127,7 @@ $(function(){
 	};
 	$("#passt")[0].onblur=function(){
 		
-		$(".focus3").css({display:"none"});
+//		$(".focus3").css({display:"none"});
 		
 	};
 	$("#repasst")[0].onclick=function(){
@@ -136,7 +137,7 @@ $(function(){
 	};
 	$("#repasst")[0].onblur=function(){
 		
-		$(".focus4").css({display:"none"});
+//		$(".focus4").css({display:"none"});
 		
 	};
 	
@@ -148,6 +149,85 @@ $(function(){
 		$(this).css({"box-shadow": "0 0 0 #daeef5"});
 		
 	});
+	
+	
+	
+	
+//	$("#phonetxt").blur(function(){
+//		let xhr=new XMLHttpRequest();
+//		xhr.open("get","regusercheck.php"+this.value,true);
+//		xhr.onreadystatechange=function(){
+//			if(xhr.readyState==4 && xhr.status==200){
+//				let str=xhr.responseText;
+//				if(str=="1"){
+//					$(".focus1").css({display:"block"});
+//					$(".focus1").text("恭喜你，该用户名没有人用，可以注册！");
+//				}else{
+//					$(".focus1").css({display:"block"});
+//					$(".focus1").text("该用户名已占用，请重新输入！");				
+//				}
+//			}
+//		}
+//		xhr.send();
+//	});
+
+	$("#phonetxt").blur(function(){			
+		if(checkAll('Phone',this.value)){
+			$("#shouji").text("正确");	
+		}else{
+			$("#shouji").text("用户不合法，重新输入");
+		}
+	});
+//	$("#passt").blur(function(){			
+//		if(checkAll('Passwords',this.value)){
+//			$(".focus3").text("正确");	
+//		}else{
+//			$(".focus3").text("用户不合法，重新输入");
+//		}
+//	});
+	
+	
+	$('#passt').blur(function(){
+          var pass = this.value;
+		  if(pass.length>=6 && pass.length<=20){
+			var hasNum = false;
+			var regNum = /\d/;
+			if(regNum.test(pass)){
+				hasNum = true;
+			}
+			var hasLetter = false;
+			var regLetter = /[a-zA-Z]/;
+			if(regLetter.test(pass)){
+				hasLetter = true;
+			}
+			var hasSpecial = false;
+			var regSpecial = /[@!#\$%]/;
+			if(regSpecial.test(pass)){
+				hasSpecial = true;
+			}	
+			let level = hasNum+hasLetter+hasSpecial;
+			if(level){
+				$(".focus3").text("密码格式正确");
+			}else{
+				$(".focus3").text("密码格式不合法，重新输入");
+			}
+      	}
+	});
+	
+	$("#repasst").blur(function(){
+		var pwd=$("#passt").val();
+		if(this.value==pwd){
+			$(".focus4").text("正确");
+			var haspwd1=true;			
+		}else{
+			$(".focus4").text("两次输入不一致，请重新输入") ;
+		}
+	});
+	
+	
+	
+	
+	
 		
 		
 });

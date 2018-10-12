@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+<meta charset="UTF-8">
 		<title>购物车-聚美优品</title>
 		<link rel="stylesheet" type="text/css" href="css/shopcar.css"/>
 	</head>
@@ -55,8 +55,8 @@
 				</div>
 				
 				<div class="groups">
-					<table class="carbiao">
-						<thead>
+					<table class="carbiao" style="position: relative;" >
+						<thead style="position: relative;">
 							<tr>
 								<th >
 									<div class="carheader">
@@ -70,9 +70,23 @@
 								<th >小计（元）</th>
 								<th >操作</th>
 							</tr>
+							<tr class="rems" id="removedowns">
+								
+								<td  colspan="5" class="rem">
+									<div class="removedown">
+										您已删除 <a href="#">科颜氏金盏花植物爽肤水500ml</a>
+										，如有误， 可 <a href="#">撤销删除</a>
+									</div>
+								</td>
+								
+							</tr>
+							
+							
+							
+							
 						</thead>
-						<tbody>
-							<tr>
+						<tbody id="cartab">
+							<tr >				
 								<td>
 									<div class="wupin">
 										<input class="l" type="checkbox" name="" id="" value="" />
@@ -93,9 +107,9 @@
 								<td>
 									<div class="goodsan">
 										<div class="caozuo">
-											<span class="l">-</span>
-											<input  class="l" type="text" name="" id="" value="2" />
-											<span class="l">+</span>
+											<span class="l reduce" >-</span>
+											<input  class="l" type="text" name="" id="" value="1" />
+											<span class="l add">+</span>
 										</div>
 									</div>
 								</td>
@@ -106,9 +120,12 @@
 								</td>
 								<td>
 									<div class="gooder">
-										<a href="#"></a>
+										<a href="#" class="remove"></a>
 									</div>
 								</td>
+								
+							
+								
 								
 							</tr>
 							<tr>
@@ -134,9 +151,9 @@
 								<td>
 									<div class="goodsan">
 										<div class="caozuo">
-											<span class="l">-</span>
+											<span class="l reduce" >-</span>
 											<input  class="l" type="text" name="" id="" value="1" />
-											<span class="l">+</span>
+											<span class="l add" >+</span>
 										</div>
 									</div>
 								</td>
@@ -148,7 +165,7 @@
 								</td>
 								<td>
 									<div class="gooder">
-										<a href="#"></a>
+										<a href="#" class="remove"></a>
 									</div>
 								</td>
 								
@@ -157,7 +174,7 @@
 						</tbody>
 						<tfoot>
 							<tr>
-								<td colspan="5">商品金额：<span>¥148.00</span></td>
+								<td colspan="5">商品金额：<span>¥<span id="totalmoney">148.00</span></span></td>
 							</tr>
 						</tfoot>
 						
@@ -173,9 +190,9 @@
 							<a href="#" class="l san">清空选中商品</a>
 						</div>
 						<div class="r right">
-							共 <span> 2 </span>件商品    
+							共 <span id="totalnums">   2   </span>件商品    
 							商品应付总额：
-							<span class="twoth">¥148.00</span>
+							<span class="twoth">¥<span id="totalmoneys">148.00</span></span>
 							<a href="#">去结算</a>
 						</div>
 					</div>
@@ -350,16 +367,8 @@
 							</p>											
 						</li>
 						
-					</ul>	
-					
-				
-				
-				
-				</div>
-			
-			
-			
-			
+					</ul>				
+				</div>	
 			
 			</div>
 			
@@ -395,3 +404,52 @@
 		
 	</body>
 </html>
+<script type="text/javascript" src="js/handlecar.js" ></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+window.onload=function(){
+		//1、加号函数
+		var objAdd=$(".add");
+		for(var i=0;i<objAdd.length;i++){
+			objAdd[i].onclick=addCount;
+				
+		}
+			//2、减号函数
+		var objReduce=$(".reduce");
+		for(var i=0;i<objReduce.length;i++){
+			objReduce[i].onclick=reduceCount;
+		}
+		//3、删除函数
+		var objRemove=$(".remove");
+		for(var i=0;i<objRemove.length;i++){
+			objRemove[i].onclick=remove;
+		}
+	
+};
+	
+function $(str){//#box .cls  p
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>

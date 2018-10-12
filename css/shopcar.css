@@ -17,6 +17,40 @@ a:hover{ color:#eb155b;}
     color: #999999;
     }
 #cartop .right a{color: #ed145b;}
+/*===============cartab================*/
+#removedowns{
+	height: 28px;
+	position: absolute;
+	left: 0;
+	top: 24px;
+	z-index: 2;
+	display:none;
+}
+#removedowns .rem{
+	height: 28px;
+}
+
+#removedowns .rem .removedown{
+	width: 946px;
+	height: 28px;
+    padding-left: 10px;
+    line-height: 28px;
+    background: #fffef5;
+    border: 1px solid #fabf7b;
+}
+#removedowns .rem .removedown a{
+	color: #ed145b;
+    text-decoration: none;
+}
+#removedowns .rem .removedown a:hover{
+    text-decoration: underline;
+}   
+
+
+
+
+
+
 
 /*===============header================*/
 #header{
