@@ -90,7 +90,7 @@
 		<div id="header">
 			<div class="w">
 				<div class="l left">
-					<h1><img src="img/logo_new.jpg"/></h1>
+					<h1><a href="index.html"><img src="img/logo_new.jpg"/></a></h1>
 				</div>
 				
 				<div class="l center">
@@ -322,51 +322,114 @@
 		
 		<div id="news">
 			<div class="w">
-				<div class="up">
-					<a class="l" href="index.html">今日疯抢<span></span></a>
-					<a class="r" href="index.html">明日预告</a> 
+				<div class="up" id="backtop">
+					<p class="l"  id="nowbuy">今日疯抢<span></span></p>
+					<p class="r"  id="tombuy">明日预告<span></span></p> 
 				</div>
-				<div class="center1">
+				<div class="todayimg" id="jintian">
+					<div class="center1">
 					<a class="l left" href="#">
 						<img src="img/img01.jpg"/>
 					</a>
 					<a class="r left" href="#">
 						<img src="img/img03.jpg"/>
 					</a>	
-				</div>
-				<div class="center1">
-					<a class="l left" href="#">
-						<img src="img/img12.jpg"/>
-					</a>
-					<a class="r left" href="#">
-						<img src="img/img05.jpg"/>
-					</a>		
-				</div>
-				<div class="center1">
-					<a class="l left" href="#">
-						<img src="img/img06.jpg"/>
-					</a>
-					<a class="r left" href="#">
-						<img src="img/img07.jpg"/>
-					</a>		
-				</div>
-				<div class="center1">
-					<a class="l left" href="#">
-						<img src="img/img13.jpg"/>
-					</a>
-					<a class="r left" href="#">
-						<img src="img/img09.jpg"/>
-					</a>		
-				</div>
-				<div class="center1">
-					<a class="l left" href="#">
-						<img src="img/img10.jpg"/>
-					</a>
-					<a class="r left" href="#">
-						<img src="img/img11.jpg"/>
-					</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							<img src="img/img05.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							<img src="img/img12.jpg"/>
+						</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							<img src="img/img06.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							<img src="img/img07.jpg"/>
+						</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							<img src="img/img13.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							<img src="img/img09.jpg"/>
+						</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							<img src="img/img11.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							<img src="img/img10.jpg"/>
+						</a>		
+					</div>
+				
+					
 				</div>
 				
+				<div class="tomorrowimg" id="mingtian">
+					<div class="center1">
+					<a class="l left" href="#" >
+						
+						<img src="img/5bbeb9a010663_535_212.jpg"/>
+					</a>
+					<a class="r left" href="#">
+						
+						<img src="img/img04.jpg"/>
+					</a>	
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							
+							<img src="img/img08.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							
+							<img src="img/img22.jpg"/>
+						</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							
+							<img src="img/img16.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							
+							<img src="img/img20.jpg"/>
+						</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							
+							<img src="img/img02.jpg"/>
+						</a>
+						<a class="r left" href="#">
+							
+							<img src="img/img23.jpg"/>
+						</a>		
+					</div>
+					<div class="center1">
+						<a class="l left" href="#">
+							
+							<img src="img/img21.jpg"/>
+						</a>
+						<a class="r left" href="#">					
+							<img src="img/img14.jpg"/>
+						</a>
+								
+					</div>
+				
+					
+				</div>
+				
+				
+				
+			
+			
 			</div>
 			
 		</div>
@@ -1028,6 +1091,7 @@ $(function(){
 				
 			}
 			if($scrolls<=offset1){
+				//$("#homeback").animate({width: '100%'}, "slow");
 				$("#homeback").css({display:"none"});
 			}
 			if($scrolls>=offset2){
@@ -1054,7 +1118,28 @@ $(function(){
 		});
 		
 		
+
+		$("#nowbuy").click(function(){
+			
+			document.documentElement.scrollTop =document.body.scrollTop=527;
+			$(this).css({color:"#f7f7f7", background:"#666666"});
+			$("#tombuy").css({color:"#333",background:"#f7f7f7"});
+			$("#nowbuy span").css({display:"block"});
+			$("#tombuy span").css({display:"none"});
+			$(".todayimg").show();
+			$(".tomorrowimg").hide();
+		});
 		
+		$("#tombuy").click(function(){
+			document.documentElement.scrollTop =document.body.scrollTop=527;
+			
+			$(this).css({color:"#f7f7f7", background:"#666666"});
+			$("#nowbuy").css({color:"#333",background:"#f7f7f7"});
+			$("#tombuy span").css({display:"block"});
+			$("#nowbuy span").css({display:"none"});
+			$(".tomorrowimg").show();
+			$(".todayimg").hide();
+		});
 		
 		
 		

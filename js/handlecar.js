@@ -11,7 +11,7 @@ function addCount(){
 	function reduceCount(){
 		var counts=parseInt(this.nextElementSibling.value);
 		counts--;
-		if(counts<0){
+		if(counts<1){
 			return;
 		}
 		this.nextElementSibling.value=counts;
@@ -39,3 +39,6 @@ function totalMoneys(){
 		$("#totalmoneys").innerHTML=totalPrice+".00";
 		$("#totalnums").innerHTML=totalNum+" ";
 }	
+
+
+

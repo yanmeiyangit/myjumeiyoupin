@@ -9,6 +9,67 @@ a:hover{ color:#eb155b;}
 .w{ width:960px; margin:0 auto}
 .l{ float:left;}
 .r{ float:right}
+/*=======================norlogin=================*/
+#norlogin{
+	display: none;
+}
+
+#norlogin  .pass .mima {    
+	background: url(../logimg/sign.png) no-repeat 5px -50px;
+    width: 250px;
+    display: inline-block;
+    border: 1px solid #CFCFCF;
+    background-color: #fff;
+    vertical-align: middle;
+    padding: 10px 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    outline: 0;
+    height: auto;
+    padding-left: 38px;}
+#norlogin  .pass .panmi{
+	position: absolute;
+	 margin-top: 4px;color: #999;
+	 top: 100%;left: 0;
+	 display: none;
+}
+#norlogin  .pass .panmi1{
+	position: absolute;
+	 margin-top: 4px;color: #999;
+	 top: 100%;left: 0;
+	 display: none;
+}
+#norlogin .yanzheng{
+	display: block;
+	height: 44px;
+	cursor: pointer;
+	line-height: 44px;
+	font-size: 14px;
+	color: #333;
+	background:linear-gradient(0deg,hsla(0,0%,93%,.6),hsla(0,0%,100%,0));
+	border: 1px solid #d9d9d9;
+    
+}
+#norlogin .yanzheng .yispan{
+	 display:inline-block;
+	width: 28px; height: 28px; 
+	background: #f7cbd9;
+	border-radius: 50%;
+	margin: 7px 15px;
+	position: relative;
+}
+#norlogin .yanzheng .yispan i{
+	display:block;
+	width: 10px; 
+	height: 10px;
+	border-radius: 50%; 
+	background: #ed145b;
+	position: absolute;
+	left:9px;
+	top:9px;
+}
+
+
 /*=======================header=================*/
 #header{height: 85px;overflow: hidden;}
 #header .w{height: 100%;}
@@ -28,14 +89,14 @@ a:hover{ color:#eb155b;}
 #banner .w .loginpage .logtop .right a:hover{text-decoration: underline;}    
 
 #banner .w .loginpage .radiocheck{ height: 30px;} 
-#banner .w .loginpage .radiocheck span{ height: 14px; padding-right:30px ;}
+#banner .w .loginpage .radiocheck span{ height: 14px; padding-right:30px ; cursor:pointer;}
 #banner .w .loginpage .radiocheck span input{vertical-align: middle;}
 #banner .w .loginpage .forms{overflow: hidden;}
 #banner .w .loginpage .forms .txts{position:relative;height: 44px; margin-bottom: 26px;}
 #banner .w .loginpage .forms .txts input{ margin: 2px; background:url(../logimg/sign.png) no-repeat 5px 0 ;width: 250px;border: 1px solid #CFCFCF;vertical-align: middle;padding: 10px 8px;padding-left: 38px;line-height: 1.5; font-size:14px;outline: 0;height: auto}
-#banner .w .loginpage .forms .txts p{display:none;position: absolute; margin-top: 4px;color: #999;top: 100%;left: 0}
+#banner .w .loginpage .forms .txts p{/*display:none;*/position: absolute; margin-top: 4px;color: #999;top: 100%;left: 0}
 
-#banner .w .loginpage .forms .pass{position:relative;height: 44px;font-size: 12px;margin: 30px 0;clear: both;color: #333;}
+#banner .w .loginpage .forms .pass{position:relative;height: 44px;font-size: 12px;margin: 28px 0;clear: both;color: #333;}
 #banner .w .loginpage .forms .pass .left input{background:url(../logimg/sign.png) no-repeat 5px -50px ; width: 88px;display: inline-block;border: 1px solid #CFCFCF;background-color: #fff;vertical-align: middle; padding: 10px 8px;line-height: 1.5;font-size: 14px;outline: 0;height: auto;padding-left: 38px;}
 #banner .w .loginpage .forms .pass .left p{display:none;position: absolute; margin-top: 4px;color: #999;top: 100%;left: 0}
 #banner .w .loginpage .forms .pass>a{display: inline-block;width: 130px;background: linear-gradient(to bottom,#fcfcfc,#f2f2f2);border: 1px solid #d9d9d9;padding: 0 8px;line-height: 41px;height: 41px;font-weight: 700;color: #666;margin-left: 10px;text-align: center;}

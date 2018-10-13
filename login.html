@@ -35,18 +35,18 @@
 						</div>
 					</div>
 					<div class="radiocheck">
-						<span>
+						<span id="dongtai">
 							<input type="radio"  name="log"  checked />
 							手机动态密码登录
 						</span>
-						<span >
+						<span id="putong">
 							<input type="radio"  name="log"  />
 							普通登录
 						</span>
 						
 					</div>
 					
-					<form class="forms" action="loginCheck.php" method="post">
+					<form class="forms" id="shoujilogin" action="loginCheck.php" method="post">
 						<div class="txts">
 							<input type="text" name="userphone" id="phonetxt" placeholder="已注册的手机号码"  />
 							<p class="focus1">请输入11位手机号码</p>
@@ -60,6 +60,32 @@
 							<a href="#" class="r right">获取手机动态密码</a>
 						</div>
 						
+						<p class="autos">
+							<input type="checkbox" name="" id="" checked />
+							自动登录
+						</p>
+						<input  class="sub" type="submit" name="" id="" value="登录" />
+						
+					</form>
+					
+					
+					<form class="forms" id="norlogin" action="loginCheck.php" method="post">
+						<div class="txts">
+							<input type="text" class="erlogin1" name="userphone" id="phonetxt" placeholder="已验证手机/邮箱/用户名" />
+							<p class="panmi1">请输入登录名,登录名可能是您的手机号、邮箱或用户名</p>
+						</div>
+						
+						<div class="pass">		
+								<input type="text"  class="mima erlogin2" name="userpass" id="matxt" placeholder="密码" />
+								<p class="panmi" >请输入您的密码,您的密码可能为字母/数字或符号的组合</p>
+							
+						</div>
+						
+						<a href="#" class="yanzheng"> 
+							<span class="l yispan"><i></i> </span>
+							<span class="l">点击开始验证<span>
+							
+						</a>
 						<p class="autos">
 							<input type="checkbox" name="" id="" checked />
 							自动登录
@@ -131,6 +157,26 @@ $(function(){
 		
 	};
 	
+	$(".erlogin1").click(function(){
+		$(this).css({"box-shadow": "2px 2px 8px #daeef5"});
+		$(".panmi1").css({display:"block"});
+	});
+	$(".erlogin1").blur(function(){
+		$(this).css({"box-shadow": "0 0 0 #daeef5"});
+		$(".panmi1").css({display:"none"});
+	});
+	
+	$(".erlogin2").click(function(){
+		$(this).css({"box-shadow": "2px 2px 8px #daeef5"});
+		$(".panmi").css({display:"block"});
+	});
+	$(".erlogin2").blur(function(){
+		$(this).css({"box-shadow": "0 0 0 #daeef5"});
+		$(".panmi").css({display:"none"});
+	});
+	
+	
+	
 	$("#matxt")[0].onclick=function(){
 		$("#matxt").css({"box-shadow": "2px 2px 3px #daeef5"});
 		$(".focus2").css({display:"block"});
@@ -148,9 +194,29 @@ $(function(){
 		$(".changbg").css({background:"url(logimg/icon.jpg) no-repeat -274px 0"});	
 	});
 	
+	
+	$("#dongtai").click(function(){			
+			$("#shoujilogin").show();
+			$("#norlogin").hide();
+	});
+		
+	$("#putong").click(function(){	
+			$("#norlogin").show();
+			$("#shoujilogin").hide();
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 		
-})
+});
 	
 	
 	

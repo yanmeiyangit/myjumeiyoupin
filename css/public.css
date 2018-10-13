@@ -15,7 +15,7 @@ body .searchnav li a{text-shadow: 1px 1px 1px #F1F3F4;}
 body .searchnav li span{ margin-right: 6px; color: #999}
 /*======================homeback==============*/
 #homeback{    
-		width: 60px;
+	width: 60px;
     position: fixed;
     left: 12px;
     top: 150px;
@@ -23,7 +23,7 @@ body .searchnav li span{ margin-right: 6px; color: #999}
     display: block;
     }
 #homeback .upto{
-		width: 60px;
+	width: 60px;
     height: 45px;
     font-size: 14px;
     background: #fe6397;
@@ -41,7 +41,7 @@ body .searchnav li span{ margin-right: 6px; color: #999}
 	 	height: 62px;  
 }		
 #homeback .down li a{
-	 	width: 60px;
+	width: 60px;
     height: 22px;
     padding-top: 40px;
     text-align: center;
@@ -49,19 +49,19 @@ body .searchnav li span{ margin-right: 6px; color: #999}
 }	
 #homeback .down li:nth-child(1) a{
 		
-	 	background: url(../img/pc_new.jpg) no-repeat -176px 0;
+	background: url(../img/pc_new.jpg) no-repeat -176px 0;
 }	
 #homeback .down li:nth-child(2) a{
-	 	background: url(../img/pc_new.jpg) no-repeat 0 -124px;
+	background: url(../img/pc_new.jpg) no-repeat 0 -124px;
 }
-#homeback .down li:nth-child(2):hover a{
-	 	background: url(../img/pc_new.jpg) no-repeat -88px -124px;
+#homeback .down li:nth-child(2) a:hover{
+	background: url(../img/pc_new.jpg) no-repeat -88px -124px;
 }
 #homeback .down li:nth-child(3) a{
-	 	background: url(../img/pc_new.jpg) no-repeat 0 -186px;
+	background: url(../img/pc_new.jpg) no-repeat 0 -186px;
 }
-#homeback .down li:nth-child(3):hover a{
-	 	background: url(../img/pc_new.jpg) no-repeat -88px -186px;
+#homeback .down li:nth-child(3) a:hover{
+	background: url(../img/pc_new.jpg) no-repeat -88px -186px;
 }
 
 #homeback .down li:nth-child(1) a span{
@@ -266,12 +266,19 @@ body .searchnav li span{ margin-right: 6px; color: #999}
 #news{overflow: hidden; background: #f7f7f7;}
 #news .w{overflow: hidden;}
 #news .w .up{height: 46px;width: 463px; margin:0 auto;line-height: 46px;  margin-top: 20px; }
-#news .w .up a{position: relative; color:#333333;display: block;border: 1px solid #666666;  padding: 0 75px; font-size: 20px;}
+#news .w .up p{cursor:pointer;position: relative; color:#333333;display: block;border: 1px solid #666666;  padding: 0 75px; font-size: 20px;}
 #news .w .up .l{border-right: 0;background: #666666; color: #e6e6e6;}
 #news .w .up span{position:absolute;left:109px; bottom:-10px;width: 0;height: 0;border-top:9px solid #666666;border-left: 9px solid #f7f7f7;border-right: 9px solid #f7f7f7;}
+
 #news .w .center1{margin-top: 20px; overflow: hidden;}
 #news .w .center1 a img{width:535px ;height:212px;}
 #news .w .center1 a:hover img{opacity:0.8 ;}
+
+
+#news .w .tomorrowimg{display: none;}
+#news .w .up  p:nth-child(2) span{display: none;}
+
+
 /*===========================mustsee=====================*/
 #mustsee{overflow: hidden; background:#f7f7f7 ; padding-bottom: 40px;}
 #mustsee .w{background:#f7f7f7 ;}

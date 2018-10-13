@@ -368,7 +368,7 @@ background: url(../img/shopcarimg/order_path.png) no-repeat -2px -2px;}
 }
 /*=========================alsobuy=====================*/
 #alsobuy{ overflow: hidden;margin: 20px auto 50px auto;}
-#alsobuy .w{overflow: hidden;}
+#alsobuy .w{overflow: hidden; }
 #alsobuy .w .alsoup{
 	height: 30px;
     line-height: 30px;
@@ -400,6 +400,11 @@ background: url(../img/shopcarimg/order_path.png) no-repeat -2px -2px;}
   	 border-bottom: 0;
   	
  }
+ #alsobuy .w .down{
+ 	display: block;
+ 	
+
+ }
  #alsobuy .w .down ul li{
  	 width: 160px;
     padding: 15px 16px;
@@ -428,7 +433,40 @@ background: url(../img/shopcarimg/order_path.png) no-repeat -2px -2px;}
     font-size: 12px;
     background-color: #fa417d
 } 
-    
+ 
+#alsobuy .w .down1 {
+	display: none;
+
+	
+}
+ #alsobuy .w .down1 ul li{
+ 	 width: 160px;
+    padding: 15px 16px;
+ }
+ #alsobuy .w .down1 ul li>p.er{
+ 	margin-top: 5px;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+ }
+  #alsobuy .w .down1 ul li>p.er a:hover{
+  	color: #ed145b;
+  	text-decoration: underline;
+  }
+#alsobuy .w .down1 ul li>p.san{
+	    margin: 10px 0;
+	    color: #ed145b;
+    	font-size: 18px;
+}  
+#alsobuy .w .down1 ul li>p.si a{
+	display: inline-block;
+    width: 95px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    background-color: #fa417d
+}    
 /*======================fu==============*/
 #fu{
 	width: 59px;
