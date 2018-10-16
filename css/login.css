@@ -48,15 +48,25 @@ a:hover{ color:#eb155b;}
 	color: #333;
 	background:linear-gradient(0deg,hsla(0,0%,93%,.6),hsla(0,0%,100%,0));
 	border: 1px solid #d9d9d9;
+	position: relative;
     
 }
+#norlogin .yanzheng .circles{
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	left:15px;
+	top:7px;
+}
 #norlogin .yanzheng .yispan{
-	 display:inline-block;
+	display:inline-block;
 	width: 28px; height: 28px; 
 	background: #f7cbd9;
 	border-radius: 50%;
-	margin: 7px 15px;
-	position: relative;
+	
+}
+#norlogin .yanzheng .dianji{
+	margin-left: 55px;
 }
 #norlogin .yanzheng .yispan i{
 	display:block;
@@ -67,6 +77,7 @@ a:hover{ color:#eb155b;}
 	position: absolute;
 	left:9px;
 	top:9px;
+	z-index: 4;
 }
 
 

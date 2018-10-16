@@ -31,7 +31,7 @@
 						<h1 class="l">登录聚美</h1>
 						<div class="r right">
 							还没有聚美帐号？
-							<a href="">30秒注册 </a>
+							<a href="register.html">30秒注册 </a>
 						</div>
 					</div>
 					<div class="radiocheck">
@@ -57,7 +57,7 @@
 								<input type="text" name="userpass" id="matxt" placeholder="动态密码" />
 								<p class="focus2">请点击获取手机动态密码</p>
 							</div>
-							<a href="#" class="r right">获取手机动态密码</a>
+							<a href="#" class="r right" id="huoqu">获取手机动态密码</a>
 						</div>
 						
 						<p class="autos">
@@ -81,9 +81,11 @@
 							
 						</div>
 						
-						<a href="#" class="yanzheng"> 
-							<span class="l yispan"><i></i> </span>
-							<span class="l">点击开始验证<span>
+						<a href="#" class="yanzheng" id="tests"> 
+							<div class="circles">
+								<span class="l yispan"><i class="eri"></i> </span>
+							</div>
+							<span class="l dianji">点击开始验证<span>
 							
 						</a>
 						<p class="autos">
@@ -205,8 +207,15 @@ $(function(){
 			$("#shoujilogin").hide();
 	});
 	
+	$("#huoqu").click(function(){
+		var str=goma(6);
+		$("#matxt").val(str);	
+	});
 	
-	
+	$("#tests").mouseenter(showAndHide1);
+//	$("#tests").mouseleave(function(){
+//		$(".yispan").stop();	
+//	});
 	
 	
 	
@@ -217,7 +226,23 @@ $(function(){
 		
 		
 });
-	
+function goma(num){
+	var str="";
+	for(var i=1;i<=num;i++){
+		str+=parseInt(Math.random()*10);			
+	}
+	return str;	
+}
+
+function showAndHide1(){
+	$(".yispan").toggle(1000,function(){
+		$(".eri").animate({
+			width: "30%",
+    		height: "30%"
+		},500);
+	});
+}
+		
 	
 	
 </script>
