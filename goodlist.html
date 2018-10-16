@@ -14,7 +14,8 @@
 					<li class="l"><a href="register.html">美妆商城</a></li>
 					<li class="l"><a href="login.html">极速免税店</a></li>
 					<li class="l"><a href="register.html">手机聚美</a></li>
-					<li class="l"><a href="login.html">正品保证</a></li>
+					<li class="l"><a href="login.html">正品保证<span ></span></a>		
+					</li>
 				</ul> 
 				<ul class="r right">
 					<li class="l"><a href="#">登录</a></li>
@@ -22,7 +23,7 @@
 					<li class="l"><a href="#">订单查询</a></li>
 					<li class="l">
 						<a href="#" >我的聚美<span ></span></a>			
-						<!--<div class="erji">
+						<div class="erji">
 							<a href="">我的订单</a>
 							<a href="">我的现金券</a>
 							<a href="">我的红包</a>
@@ -32,7 +33,7 @@
 							<a href="">我的心愿单</a>
 							<a href="">会员中心</a>
 							<a href="">礼品卡兑换</a>
-						</div>-->
+						</div>
 					</li>
 					<li class="l">
 						<a href="#">更多<span ></span></a>
@@ -81,7 +82,11 @@
 						</p>
 					</div>
 					<div class="zuodown">
-						<img src="img/goodlist/1883899_dx_1000_400.jpg"/>
+						<div id="box">
+							<div id="mirrorbox"></div>
+							<div id="showbox"></div>
+						</div>
+						
 					</div>
 					<p class="xiap">    
 						<a href="#" class="l">保湿</a>
@@ -272,15 +277,20 @@
 									<option value="">全部年龄</option>
 									<option value="">0-20岁</option>
 									<option value="">21-25岁</option>
-									<option value=""></option>
-									<option value=""></option>
+									<option value="">26-30岁</option>
+									<option value="">31-35岁</option>
+									<option value="">36-40岁</option>
+									<option value="">40岁以上</option>
 								</select>
 								<select name="" class="l">
 									<option value="">全部肤质</option>
 									<option value="">中性肤质</option>
 									<option value="">干性肤质</option>
-									<option value=""></option>
-									<option value=""></option>
+									<option value="">混合型肤质</option>
+									<option value="">油性肤质</option>
+									<option value="">敏感性肤质</option>
+									<option value="">敏感中性肤质</option>
+									<option value="">敏感油性肤质</option>
 								</select>
 								
 							</div>
@@ -344,7 +354,7 @@
 			</div>
 		</div>
 		
-		<div id="henglan">
+		<!--<div id="henglan">
 			<div class="w">
 				<ul class="l">
 					<li class="l"><a href="#message">商品信息</a></li>
@@ -364,7 +374,7 @@
 				
 			</div>
 			
-		</div>
+		</div>-->
 		
 		<div id="asides">
 			<div class="mains">
@@ -515,39 +525,151 @@
 			});			
 		});
 
-		$(window).scroll( function(){
-			var a=[$("#message").offset().top,$("#xiangq").offset().top,$("#fangfa").offset().top,$("#pai").offset().top,$("#users").offset().top,$("#howdo").offset().top];
-		for(let i=0;i<a.length;i++){
-//			console.log(a[i]);
-			let $scrolls=document.documentElement.scrollTop || document.body.scrollTop;
+//		$(window).scroll( function(){
+//			var a=[$("#message").offset().top,$("#xiangq").offset().top,$("#fangfa").offset().top,$("#pai").offset().top,$("#users").offset().top,$("#howdo").offset().top];
+//		for(let i=0;i<a.length;i++){
+////			console.log(a[i]);
+//			let $scrolls=document.documentElement.scrollTop || document.body.scrollTop;
+//
+//			if($scrolls>=a[i]){
+//					
+//				$("#henglan ul a").css({
+//		  			"background": "#fff",
+//				    "border-top": "3px solid #e42141",
+//				   " margin-top": "-1px",
+//				    "color": "#e42141"
+//		  		});	
+//			}else{
+//				$("#henglan ul a").css({
+//		  			"background": "url(img/goodlist/fixe_nav_bg_07.png) repeat-x",
+//				    "border-top": "0",
+//				   " margin-top": "0",
+//				    "color": "#fff"
+//		  		});	
+//			}
+//		}
+//		
+//
+//	
+//	
+//	});
+	 
+		$(".donghua1").mouseenter(function(){
+		  	$(".myspan1").animate({left: '-100px'}, 250);
+		  	$(".myspan1").css({display:"block"});
+		});
 
-			if($scrolls>=a[i]){
-					
-				$("#henglan ul a").css({
-		  			"background": "#fff",
-				    "border-top": "3px solid #e42141",
-				   " margin-top": "-1px",
-				    "color": "#e42141"
-		  		});	
-			}else{
-				$("#henglan ul a").css({
-		  			"background": "url(img/goodlist/fixe_nav_bg_07.png) repeat-x",
-				    "border-top": "0",
-				   " margin-top": "0",
-				    "color": "#fff"
-		  		});	
-			}
-		}
+		$(".donghua1").mouseleave(function(){
+			$(".myspan1").animate({left: '-130px'}, 250);
+			$(".myspan1").css({display:"none"});
+		});
 		
+		$(".donghua2").mouseenter(function(){
+		  	$(".myspan2").animate({left: '-100px'}, 250);
+		  	$(".myspan2").css({display:"block"});
+		});
 
-	
-	
-});
+		$(".donghua2").mouseleave(function(){
+			$(".myspan2").animate({left: '-130px'}, 250);
+			$(".myspan2").css({display:"none"});
+		});
+		
+		$(".donghua3").mouseenter(function(){
+		  	$(".myspan3").animate({left: '-100px'}, 250);
+		  	$(".myspan3").css({display:"block"});
+		});
+
+		$(".donghua3").mouseleave(function(){
+			$(".myspan3").animate({left: '-130px'}, 250);
+			$(".myspan3").css({display:"none"});
+		});
+		
+		$(".donghua4").mouseenter(function(){
+		  	$(".myspan4").animate({left: '-100px'}, 250);
+		  	$(".myspan4").css({display:"block"});
+		});
+
+		$(".donghua4").mouseleave(function(){
+			$(".myspan4").animate({left: '-130px'}, 250);
+			$(".myspan4").css({display:"none"});
+		});
+		
+		$(".donghua5").mouseenter(function(){
+		  	$(".myspan5").animate({left: '-100px'}, 250);
+		  	$(".myspan5").css({display:"block"});
+		});
+
+		$(".donghua5").mouseleave(function(){
+			$(".myspan5").animate({left: '-130px'}, 250);
+			$(".myspan5").css({display:"none"});
+		});
+		$(window).scroll(function(){
+			$scrolls=document.documentElement.scrollTop || document.body.scrollTop;
+			if($scrolls>=700){
+				$("#gotop").css({display:"block"});		
+			
+			}else if($scrolls<=700){
+				$("#gotop").css({display:"none"});			
+			}
+		});		
+		$("#gotop").click(function(){
+			document.documentElement.scrollTop =document.body.scrollTop=0;		
+			$(".myspan5").css({display:"none"});
+		});
+		
+		$(".shopcar").click(function(){
+			$(".goodscar").css({display:"block"});
+			
+		});
+		
+		$(":not('.goodscar')").mousedown(function(){
+			$(".goodscar").css({display:"none"});
+			
+		});
+		
+		
+		
+//		$("#box").mouseover(function(){
+//			$("#mirrorbox").css({display:"block"});
+//			$("#showbox").css({display:"block"});
+//			
+//		});
+//		
+//		$("#box").mouseout(function(){
+//			$("#mirrorbox").css({display:"none"});
+//			$("#showbox").css({display:"none"});
+//		});
+
+		$("#box").mousemove(function(){		
+			scales();
+		});
 	
 	
 });	
 	
-	
+	function scales(){
+		let left1=$("#box").offset().left-50;
+		let top1=$("#box").offset().top-40;
+		if(left1<0){
+			left1=0;
+		}else if(left1>500-100){
+			left1=500-100;
+		}
+		if(top1<0){
+			top1=0;
+		}else if(top1>350-80){
+			top1=350-80;
+		}
+		
+		$("#mirrorbox").css({
+			"left":"left1+'px'",
+			"top":"top1+'px'"
+		});
+		
+		$("#showbox").css({
+			"backgroundPosition":"(-3*left1)+'px '+(-3*top1)+'px'"
+		});
+	}
 	
 	
 	

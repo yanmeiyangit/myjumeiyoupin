@@ -130,8 +130,95 @@
 						<li class="l"><a href="#">首页</a></li>
 						<li class="l"><a href="#">极速免税店</a></li>
 						<li class="l"><a href="#">母婴特卖</a></li>
-						<li class="l" id="shopping">
+						<li class="l shoppingss">
 							<a href="#">美妆商城<span></span></a>
+							<div class="twomenu">
+								<div class="l left">
+									<img src="img/go1.jpg"/>
+									<img src="img/go2.jpg"/>
+								</div>
+								<div class="l lefts">
+									<div class="l yila">
+										<h3 class="guo">国际大牌</h3>
+										<a class="l">兰蔻</a>
+										<a class="l">娇韵诗</a>
+										<a class="l">伊丽莎白雅顿</a>
+										<a class="l">雅诗莱黛</a>
+										<a class="l">欧莱雅</a>
+										<a class="l">兰芝</a>
+										<a class="l">倩碧</a>
+										<a class="l">雅漾</a>
+										<a class="l">菲诗小铺</a>
+										<a class="l">悦诗风吟</a>
+									</div>
+									<div class="l yila">
+										<h3 class="hu">护肤</h3>
+										<a class="l">洁面</a>
+										<a class="l">爽肤水</a>
+										<a class="l">精华</a>
+										<a class="l">乳液</a>
+										<a class="l">面霜</a>
+										<a class="l">眼霜</a>
+										<a class="l">面膜</a>
+										<a class="l">护肤套装</a>
+									</div>
+									
+									<div class="l yila">
+										<h3 class="cai">彩妆</h3>
+										<a class="l">卸妆</a>
+										<a class="l">BB霜</a>
+										<a class="l">粉底液</a>
+										<a class="l">粉饼</a>
+										<a class="l">眼影</a>
+										<a class="l">眼线笔</a>
+										<a class="l">睫毛膏</a>
+										<a class="l">眉笔</a>
+										<a class="l">口红</a>
+										<a class="l">腮红</a>
+									</div>
+									
+									
+								</div>
+								<div class="l lefts">
+									<div class="l ers">
+										<h3 class="xiang">香氛</h3>
+										<a class="l">女士香水</a>
+										<a class="l">男士香水</a>
+										<a class="l">中性香水</a>
+										<a class="l">Q版香水</a>
+										<a class="l">香水套装</a>
+										<a class="l">精油</a>
+										
+									</div>
+									<div class="l ers">
+										<h3 class="man">男士专区</h3>
+										<a class="l">洁面</a>
+										<a class="l">爽肤水</a>
+										<a class="l">面霜</a>
+										<a class="l">精华</a>
+										<a class="l">护肤套装</a>
+										<a class="l">洗发</a>
+										<a class="l">沐浴</a>
+								
+									</div>
+									<div class="l ers">
+										<h3 class="remen">热门搜索</h3>
+										<a class="l">面膜贴</a>
+										<a class="l">洗面奶</a>
+										<a class="l">唇膏</a>
+										<a class="l">去黑头</a>
+										<a class="l">祛斑</a>
+										<a class="l">隔离</a>
+										<a class="l">祛痘</a>
+										<a class="l">去角质</a>
+										<a class="l">指甲油</a>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
 							
 						</li>
 						<li class="l"><a href="#">国际轻奢</a></li>
@@ -148,7 +235,7 @@
 		
 		
 		<div id="banner">
-			<div class="twomenu" id="indmenu" style="display: none;">
+			<!--<div class="twomenu">
 				<div class="l left">
 					<img src="img/go1.jpg"/>
 					<img src="img/go2.jpg"/>
@@ -231,7 +318,7 @@
 					
 				</div>
 				
-			</div>
+			</div>-->
 		
 		</div>
 		
@@ -951,28 +1038,14 @@
 <script type="text/javascript">
 
 $(function(){
-	
-	$("#shopping").hover(function(){
-  		$("#indmenu").css("display","block");
-  		
-	});
-	
-	$("#indmenu").mouseleave(function(){
-		$("#indmenu").css("display","none");
-	});
-	
-	
-	$("#txt1")[0].onfocus=function(){
-		$("#searmenu").css({display:"block"});
-	}
-	$("#txt1")[0].onblur=function(){
-		$("#searmenu").css({display:"none"});
-	}
 
-//	$("#txt1")[0].onkeyup=function(){
-//		$("#searchlist").css({display:"none"});
-//		$("#searchlist:contains('"+this.value+"')").css({display:"block"})
-//	}
+		$("#txt1")[0].onfocus=function(){
+			$("#searmenu").css({display:"block"});
+		}
+		$("#txt1")[0].onblur=function(){
+			$("#searmenu").css({display:"none"});
+		}
+
 		$(".donghua1").mouseenter(function(){
 		  	$(".myspan1").animate({left: '-100px'}, 250);
 		  	$(".myspan1").css({display:"block"});
@@ -1026,7 +1099,7 @@ $(function(){
 		let $liObjs=$("#footup .down li a");
 		$.each($liObjs, function testf(){
 			$liObjs.mouseenter(function(){
-		  		$(this).animate({left: '8px'}, 250);
+		  		$(this).animate({left: '9px'}, 250);
 		  	
 			});
 			$liObjs.mouseleave(function(){
