@@ -346,12 +346,16 @@ box-shadow: 0 2px 2px rgba(0,0,0,.5);}
 #searchbiao .w{
 	overflow: hidden;
 	background: #fff;
+	position: relative;
 }
 #searchbiao .w .searhead{
-	width: 100%;
+	width: 1090px;
     height: 33px;
     margin: 0 auto;
+    position: absolute;
+    top:0;
     overflow: hidden;
+    z-index: 20;
     background-image: url(../img/totalgoods/search_paixu_bg.jpg);
 }
 #searchbiao .w .searhead>span.l{
@@ -443,7 +447,7 @@ box-shadow: 0 2px 2px rgba(0,0,0,.5);}
 
 #searchbiao .w .products{
 	padding: 20px;
-    margin: 0 -32px 0 0;
+    margin: 33px -32px 0 0;
     overflow: hidden;
 }
 #searchbiao .w .products ul{

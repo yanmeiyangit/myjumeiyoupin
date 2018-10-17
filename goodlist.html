@@ -75,14 +75,14 @@
 			<div class="w">
 				<div class="l left">
 					<div class="up">
-						<p>雅诗兰黛 (Estee Lauder)红石榴鲜亮焕采三件套（滋润型）
+						<p id="goodsDesc"> <span id="goodsName">雅诗兰黛 (Estee Lauder)红石榴鲜亮焕采三件套</span>（滋润型）
 						，红石榴洁面乳125ml，深入清洁肌肤，令肌肤自内透现鲜亮光采。
 						红石榴精华保湿露200ml，滋宠每一寸干渴肌肤。排浊面膜晚霜50ml，
 						复原年轻活力，充沛肌肤水润度，尽情绽放阳光下的美丽！
 						</p>
 					</div>
 					<div class="zuodown">
-						<div id="box">
+						<div id="box" >
 							<div id="mirrorbox"></div>
 							<div id="showbox"></div>
 						</div>
@@ -104,7 +104,7 @@
 						<span class="l">美国</span>
 					</div>
 					<div class="second">
-						<span class="l yis"><em>¥</em>789</span>
+						<span class="l yis" id="goodsPrice"><em>¥</em>789</span>
 						<span class="l ers">¥1290</span>
 						<a href="#" class="r">价格详情 ></a>
 					</div>
@@ -152,15 +152,33 @@
 		
 		<div id="maindetail">
 			<div class="w">
-				<div class="toppart">
-					<ul>     
-						<li class="l"><a href="#">商品信息</a></li>
-						<li class="l"><a href="#">商品详情</a></li>
-						<li class="l"><a href="#">使用方法</a></li>
-						<li class="l"><a href="#">商品实拍</a></li>
-						<li class="l"><a href="#">用户口碑</a></li>
-						<li class="l"><a href="#">关于极速免税店</a></li>
-					</ul>	
+				<div class="toppart" style="display: none;" id="yitoppart">
+					<ul class="l">     
+						<li class="l "><a href="#" class="buyi">商品信息</a></li>
+						<li class="l "><a href="#" class="buyi">商品详情</a></li>
+						<li class="l "><a href="#" class="buyi">使用方法</a></li>
+						<li class="l "><a href="#" class="buyi">商品实拍</a></li>
+						<li class="l "><a href="#" class="buyi">用户口碑</a></li>
+						<li class="l "><a href="#" class="buyi">关于极速免税店</a></li>
+					</ul>
+					<div class="r las">
+						<span>
+							<strong>¥789</strong>
+							(<span><em style="font-style: normal;">¥</em>1290</span>)
+						</span>
+						<a href="#">加入购物车</span>
+					</div>
+				</div>
+				
+				<div class="toppart" style="display: block;" id="ertoppart">
+					<ul class="l">     
+						<li class="l "><a href="#" class="buyi">商品信息</a></li>
+						<li class="l "><a href="#" class="buyi">商品详情</a></li>
+						<li class="l "><a href="#" class="buyi">使用方法</a></li>
+						<li class="l "><a href="#" class="buyi">商品实拍</a></li>
+						<li class="l "><a href="#" class="buyi">用户口碑</a></li>
+						<li class="l "><a href="#" class="buyi">关于极速免税店</a></li>
+					</ul>
 				</div>
 				<div class="bai">
 					
@@ -502,6 +520,8 @@
 		
 	</body>
 </html>
+<script type="text/javascript" src="js/cookieTools.js" ></script>
+<script type="text/javascript" src="js/goodlist.js" ></script>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript">
 	$(function(){
@@ -525,34 +545,7 @@
 			});			
 		});
 
-//		$(window).scroll( function(){
-//			var a=[$("#message").offset().top,$("#xiangq").offset().top,$("#fangfa").offset().top,$("#pai").offset().top,$("#users").offset().top,$("#howdo").offset().top];
-//		for(let i=0;i<a.length;i++){
-////			console.log(a[i]);
-//			let $scrolls=document.documentElement.scrollTop || document.body.scrollTop;
-//
-//			if($scrolls>=a[i]){
-//					
-//				$("#henglan ul a").css({
-//		  			"background": "#fff",
-//				    "border-top": "3px solid #e42141",
-//				   " margin-top": "-1px",
-//				    "color": "#e42141"
-//		  		});	
-//			}else{
-//				$("#henglan ul a").css({
-//		  			"background": "url(img/goodlist/fixe_nav_bg_07.png) repeat-x",
-//				    "border-top": "0",
-//				   " margin-top": "0",
-//				    "color": "#fff"
-//		  		});	
-//			}
-//		}
-//		
-//
-//	
-//	
-//	});
+
 	 
 		$(".donghua1").mouseenter(function(){
 		  	$(".myspan1").animate({left: '-100px'}, 250);
@@ -629,47 +622,95 @@
 		
 		
 		
-//		$("#box").mouseover(function(){
-//			$("#mirrorbox").css({display:"block"});
-//			$("#showbox").css({display:"block"});
-//			
-//		});
-//		
-//		$("#box").mouseout(function(){
-//			$("#mirrorbox").css({display:"none"});
-//			$("#showbox").css({display:"none"});
-//		});
-
-		$("#box").mousemove(function(){		
-			scales();
+		$("#box").mouseover(function(){
+			$("#mirrorbox").css({display:"block"});
+			$("#showbox").css({display:"block"});
+			
 		});
+		
+		$("#box").mouseout(function(){
+			$("#mirrorbox").css({display:"none"});
+			$("#showbox").css({display:"none"});
+		});
+
+		$("#box").mousemove(function(event){	
+			let evt=event||window.event;
+			scales(evt);
+		});
+		
+		$(window).scroll(function(){
+			var offset1= $("#ertoppart").offset().top;
+			var scrolls = document.body.scrollTop || document.documentElement.scrollTop;
+			if(scrolls>= offset1){
+				$("#yitoppart")[0].style.display="block";
+				$("#yitoppart")[0].style.position = "fixed";
+				$("#yitoppart")[0].style.top = "0px";
+				$("#yitoppart")[0].style.width="1090px";
+				$("#yitoppart")[0].style.height="35px";
+				$("#yitoppart")[0].style.lineHeight="35px";
+				$("#yitoppart ul li a").css({padding:"0px 25px"});
+				$("#yitoppart ul li a").css({color:"white"});
+				$("#yitoppart")[0].style.backgroundColor="#000";
+				
+			}else{
+				$("#yitoppart")[0].style.display="none";
+			}
+			$("#yitoppart ul li a").mouseenter(function(){
+				$(this).css({color:"#ed145b"});
+			})
+			$("#yitoppart ul li a").mouseleave(function(){
+				$(this).css({color:"white"});
+			})
+		});
+		
+		
+		
+		$(window).scroll( function(){
+		var a=[$("#message").offset().top,$("#xiangq").offset().top,$("#fangfa").offset().top,$("#pai").offset().top,$("#users").offset().top,$("#howdo").offset().top];
+		for(let i=0;i<a.length;i++){
+			let $scrolls=document.documentElement.scrollTop || document.body.scrollTop;
+			if($scrolls>=a[i]){			
+				$(this).css({
+		  			"background": "#fff",
+				    "border-top": "3px solid #e42141",
+				   " margin-top": "-1px",
+				    "color": "#e42141"
+		  		});	
+			}else{
+				$(this).css({
+		  			"background": "black",
+				    "border-top": "0",
+				   " margin-top": "0",
+				    "color": "#fff"
+		  		});	
+			}
+		}
+	});
+		
+//	let goodsid = getCookie("goodsid");	
+//	$.ajax({
+//		type:"get",
+//		url:"getGoodsInfo.php",
+//		async:true,
+//		dataType:"json",
+//		data:{
+//			"goodsId":goodsid
+//		},
+//		success:function(data){
+//			$("#goodsName").html(data.goodsName);
+//			$("#goodsDesc").html(data.goodsDesc);
+//			$("#goodsPrice").html(data.goodsPrice);
+//			$("#goodsImg").css("background":"url("+"../"+data.goodsImg+")");
+//		}
+//		
+//	});	
+	
+		
 	
 	
 });	
 	
-	function scales(){
-		let left1=$("#box").offset().left-50;
-		let top1=$("#box").offset().top-40;
-		if(left1<0){
-			left1=0;
-		}else if(left1>500-100){
-			left1=500-100;
-		}
-		if(top1<0){
-			top1=0;
-		}else if(top1>350-80){
-			top1=350-80;
-		}
-		
-		$("#mirrorbox").css({
-			"left":"left1+'px'",
-			"top":"top1+'px'"
-		});
-		
-		$("#showbox").css({
-			"backgroundPosition":"(-3*left1)+'px '+(-3*top1)+'px'"
-		});
-	}
+	
 	
 	
 	

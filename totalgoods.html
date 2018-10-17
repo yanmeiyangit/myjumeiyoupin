@@ -283,7 +283,23 @@
 		
 		<div id="searchbiao">
 			<div class="w">
-				<div class="searhead">
+				<div class="searhead" id="guding" style="display: none;">
+					<span class="l">排序:</span>
+					<ul class="l">
+						<li class="l"><a href="#">默认</a></li>
+						<li class="l"><a href="#">价格</a></li>
+						<li class="l"><a href="#">销量</a></li>
+						<li class="l"><a href="#">人气</a></li>
+						<li class="l"><a href="#">上架时间</a></li>
+						<li class="l"><a href="#">只看特卖</a></li>
+					</ul>
+					<a href="#" class="r">下一页</a>
+					<a href="#" class="r">上一页</a>			
+					<span class="r daoshup"><span style="color: #ed145a;">1</span>/1页 </span>
+					<span class="r lastsp">共<span style="color: #ed145a;">25</span>个商品</span>
+					
+				</div>
+				<div class="searhead"  id="erding"  style="display: block;">
 					<span class="l">排序:</span>
 					<ul class="l">
 						<li class="l"><a href="#">默认</a></li>
@@ -638,7 +654,7 @@
 								<div class="qiangguang">
 									
 								</div>
-							</div>
+							</div> 
 							<a href="#">
 								<img src="img/totalgoods/1021142_350_350.jpg"/>
 							</a>
@@ -1084,7 +1100,8 @@
 	
 	</body>
 </html>
-
+<script type="text/javascript" src="js/cookieTools.js" ></script>
+<script type="text/javascript" src="js/totalgoods.js" ></script>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript">
 $(function(){
@@ -1202,6 +1219,73 @@ $(function(){
 			$(".goodscar").css({display:"none"});
 			
 		});
+		
+		
+		$(window).scroll(function(){
+			var offset1= $("#erding").offset().top;
+			var scrolls = document.body.scrollTop || document.documentElement.scrollTop;
+			if(scrolls>= offset1){
+				$("#guding")[0].style.display="block";
+				$("#guding")[0].style.position = "fixed";
+				$("#guding")[0].style.top = "0px";
+				$("#guding")[0].style.width="1090px";
+				$("#guding")[0].style.boxShadow="0 2px 3px #ccc";
+			}else{
+				$("#guding")[0].style.display="none";
+			}
+		});
+		
+		
+		
+		
+	function goGoodsDetail(obj){
+		let goodsid = obj.getAttribute("goodsid");
+		addCookie("goodsid",goodsid);
+		window.open("goodlist.html");
+	
+	}
+
+	function showList(list){
+		for(let i in list){
+			
+			
+		}
+	}
+	
+	
+	$.ajax({
+		type:"get",
+		url:"getGoodsList.php",
+		async:true,
+		dataType:"json",
+		data:{
+//			"goodsId":goodsid
+		},
+		success:function(data){
+//			$("#goodsname").html(data.goodsname);
+//			$("#goodsprice").html(data.goodsprice);
+//			$("#goodscount").html(data.goodscount);
+//			$("#goodsimg").attr("src",data.goodsImg);
+			showList();
+		}
+		
+	});	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

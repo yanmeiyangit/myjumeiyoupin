@@ -190,10 +190,15 @@ $(function(){
 		
 	};
 	
-	
+	let count = 0;
 	$(".more").click(function(){		
 		$(".showmore").toggle(400);	
-		$(".changbg").css({background:"url(logimg/icon.jpg) no-repeat -274px 0"});	
+		count++;
+		if(count%2==0){
+			$(".changbg").css({background:"url(logimg/icon.jpg) no-repeat -274px -23px"});	
+		}else{
+			$(".changbg").css({background:"url(logimg/icon.jpg) no-repeat -274px 0"});	
+		}					
 	});
 	
 	

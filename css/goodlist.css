@@ -231,7 +231,9 @@ a:hover {
   width: 634px;
   font-size: 18px;
   overflow: hidden;
-  height: 107px; }
+  height: 107px;
+  margin-top: 10px;
+  line-height: 27px; }
 
 #goodmain .w .left .zuodown {
   width: 700px;
@@ -242,32 +244,35 @@ a:hover {
 #box {
   width: 350px;
   height: 350px;
-  margin: 20px auto;
+  margin: 24px auto;
   position: relative;
   background: url(../img/goodlist/1883899_350_350.jpg) no-repeat;
   background-size: 350px 350px;
-  position: relative; }
+  position: relative;
+  border: 1px solid #ccc; }
 
 #mirrorbox {
   width: 100px;
-  height: 80px;
+  height: 100px;
   position: absolute;
   left: 100px;
   top: 120px;
-  opacity: 0.5;
-  background: pink; }
+  opacity: 0.3;
+  background: #837baf;
+  display: none; }
 
 #showbox {
-  width: 300px;
-  height: 240px;
-  background: url(../img/goodlist/1883899_350_350.jpg);
-  background-size: 1500px 1050px;
+  width: 334px;
+  height: 334px;
+  background: url(../img/goodlist/1883899_350_350.jpg) no-repeat;
+  background-size: 1050px 1050px;
   background-position: -100px -120px;
   position: absolute;
-  left: 380px;
-  top: 50px;
+  left: 360px;
+  top: 0px;
   z-index: 10;
-  background: pink; }
+  border: 8px solid #eee;
+  display: none; }
 
 #goodmain .w .left .xiap {
   padding: 18px 0 0 54px;
@@ -472,19 +477,51 @@ a:hover {
   height: 50px;
   width: 1090px;
   background: #f6f6f6;
-  overflow: hidden; }
+  overflow: hidden;
+  position: static;
+  top: auto; }
 
 #maindetail .w .toppart ul {
   height: 53px; }
 
-#maindetail .w .toppart ul li a {
+#maindetail .w .toppart ul li .buyi {
   display: block;
   padding: 15px 25px;
   font-size: 14px;
   color: #333;
   border-right: 1px solid #e5e5e5; }
 
-#maindetail .w .toppart ul li a:hover {
+#maindetail .w .toppart > .las {
+  display: block;
+  z-index: 10;
+  line-height: 21px;
+  color: #fff;
+  font-size: 18px; }
+
+#maindetail .w .toppart > .las > span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 8px;
+  line-height: 21px;
+  color: #fff;
+  font-size: 18px; }
+
+#maindetail .w .toppart > .las > span strong {
+  font-size: 22px;
+  font-weight: 700; }
+
+#maindetail .w .toppart > .las > a {
+  width: 120px;
+  height: 35px;
+  display: inline-block;
+  line-height: 41px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  background: #ed145b;
+  cursor: pointer; }
+
+#maindetail .w .toppart ul li .buyi:hover {
   color: #ed145b;
   border-top: 2px solid #ed145b;
   background: #fff; }
