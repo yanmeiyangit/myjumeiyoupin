@@ -33,7 +33,7 @@ gulp.task("logimg",function(){
 	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\img'));
 });
 
-gulp.task("build",["copy-html","css","img","logimg"],function(){
+gulp.task("build",["copy-html","copy-php","css","img","logimg"],function(){
 	console.log("ok");
 });
 gulp.task('copyallfile',function(){
