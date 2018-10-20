@@ -246,7 +246,6 @@ a:hover {
   height: 350px;
   margin: 24px auto;
   position: relative;
-  background: url(../img/goodlist/1883899_350_350.jpg) no-repeat;
   background-size: 350px 350px;
   position: relative;
   border: 1px solid #ccc; }
@@ -264,7 +263,6 @@ a:hover {
 #showbox {
   width: 334px;
   height: 334px;
-  background: url(../img/goodlist/1883899_350_350.jpg) no-repeat;
   background-size: 1050px 1050px;
   background-position: -100px -120px;
   position: absolute;

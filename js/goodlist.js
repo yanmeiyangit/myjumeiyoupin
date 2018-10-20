@@ -14,7 +14,7 @@ function scales(evt){
 		
 		$("#mirrorbox")[0].style.left=left1+"px";
 		$("#mirrorbox")[0].style.top=top1+"px";
-		$("#showbox")[0].style.backgroundPosition=(-3*left1)+"px "+(-3*top1)+"px";
+		$("#showbox")[0].style.backgroundPosition=(-2*left1)+"px "+(-2*top1)+"px";
 
 }
 

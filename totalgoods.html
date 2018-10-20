@@ -849,13 +849,15 @@ $(function(){
 		});
 		
 		
+	let list=$(".products .xiaoguo");
+	$(".products .xiaoguo").live("click",function(){
+			goGoodsDetail(this);
+	});	
 		
-		
-	function goGoodsDetail(obj){
+	function goGoodsDetail(obj){	
 		let goodsid = obj.getAttribute("goodsid");
 		addCookie("goodsid",goodsid);
-		window.open("goodlist.html");
-	
+		window.open("goodlist.html");	
 	}
 	
 	
@@ -867,13 +869,13 @@ $(function(){
 		data:{
 			"goodsId":"goodsid"
 		},
-		success:function(data){
+		success:function(data){					
 			var str=data;
 			for(let i in str){
 				var li=$('<li></li>');
 				li.addClass('l');
-				li.addClass('xiaoguo');
-				
+				li.attr("goodsid","00"+i);
+				li.addClass('xiaoguo');				
 				var p5=$('<p></p>');
 				p5.addClass("wu");
 				var p5sp1=$('<span>保湿</span>');
@@ -882,8 +884,7 @@ $(function(){
 				p5sp2.prependTo(p5);
 				var p5sp3=$('<span>滋润</span>');
 				p5sp3.prependTo(p5);
-				p5.prependTo(li);
-				
+				p5.prependTo(li);				
 				var p4=$('<p></p>');
 				p4.addClass("si");
 				var p4a2=$('<a></a>');
@@ -893,8 +894,7 @@ $(function(){
 				var p4a1=$('<a></a>');
 				p4a1.addClass("yia");
 				p4a1.prependTo(p4);
-								
-				
+												
 				var p3=$('<p></p>');
 				p3.addClass("lala");
 				var p3sp=$('<span></span>');
@@ -934,8 +934,7 @@ $(function(){
 				div1.addClass('iconw');
 				var strong1=$('<strong>【海外自营】</strong>');
 				strong1.prependTo(div1);
-				div1.prependTo(li);
-								
+				div1.prependTo(li);								
 				li.appendTo(".products ul");
 				
 			}

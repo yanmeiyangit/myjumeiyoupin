@@ -75,10 +75,10 @@
 			<div class="w">
 				<div class="l left">
 					<div class="up">
-						<p id="goodsDesc"> <span id="goodsName">雅诗兰黛 (Estee Lauder)红石榴鲜亮焕采三件套</span>（滋润型）
-						，红石榴洁面乳125ml，深入清洁肌肤，令肌肤自内透现鲜亮光采。
+						<p id="goodsDesc"> <span id="goodsName"><!--雅诗兰黛 (Estee Lauder)红石榴鲜亮焕采三件套--></span><!--（滋润型）-->
+						<!--，红石榴洁面乳125ml，深入清洁肌肤，令肌肤自内透现鲜亮光采。
 						红石榴精华保湿露200ml，滋宠每一寸干渴肌肤。排浊面膜晚霜50ml，
-						复原年轻活力，充沛肌肤水润度，尽情绽放阳光下的美丽！
+						复原年轻活力，充沛肌肤水润度，尽情绽放阳光下的美丽！-->
 						</p>
 					</div>
 					<div class="zuodown">
@@ -104,7 +104,7 @@
 						<span class="l">美国</span>
 					</div>
 					<div class="second">
-						<span class="l yis" id="goodsPrice"><em>¥</em>789</span>
+						<span class="l yis" id="goodsPrice"><em>¥</em><!--789--></span>
 						<span class="l ers">¥1290</span>
 						<a href="#" class="r">价格详情 ></a>
 					</div>
@@ -119,7 +119,7 @@
 					</div>
 					<div class="fifth">
 						<a href="#">
-							<span>加入购物车</span>
+							<span class="joincar">加入购物车</span>
 							<span class="dier"></span>
 						</a>
 					</div>
@@ -687,25 +687,42 @@
 		}
 	});
 		
-//	let goodsid = getCookie("goodsid");	
-//	$.ajax({
-//		type:"get",
-//		url:"getGoodsInfo.php",
-//		async:true,
-//		dataType:"json",
-//		data:{
-//			"goodsId":goodsid
-//		},
-//		success:function(data){
-//			$("#goodsName").html(data.goodsName);
-//			$("#goodsDesc").html(data.goodsDesc);
-//			$("#goodsPrice").html(data.goodsPrice);
-//			$("#goodsImg").css("background":"url("+"../"+data.goodsImg+")");
-//		}
-//		
-//	});	
-	
 		
+	let goodsid = getCookie("goodsid");
+	if(goodsid=="0010"){
+		goodsid='010';
+	}else if(goodsid=="0011"){
+		goodsid='011';
+	}
+	console.log(goodsid);
+
+	$.ajax({
+		type:"get",
+		url:"getGoodsInfo.php",
+		async:true,
+		dataType:"json",
+		data:{
+			"goodsId":goodsid
+		},
+		success:function(data){
+			$("#goodsDesc").html(data.goodsName+data.goodsDesc);
+			$("#goodsPrice").html("¥"+data.goodsPrice);
+			$("#box").css({"background":"url("+data.goodsImg+")"});
+			$("#showbox").css({"background-image":"url("+data.goodsImg+")"});			
+							
+		}
+		
+	});	
+	
+	
+	let list=$(".joincar");
+	$(".joincar").live("click",function(){
+		let goodsid1 = getCookie("goodsid");
+		addCookie("goodsid",goodsid1);
+		window.open("shopcar.html");
+	});
+	
+			
 	
 	
 });	
